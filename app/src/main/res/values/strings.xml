@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyOnlineStore</string>
+    <string name="password_visibility">Password Visibility</string>
+</resources>
