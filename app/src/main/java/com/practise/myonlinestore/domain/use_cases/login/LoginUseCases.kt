@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
 class LoginUseCases (private val repository: LoginRepository) {
 
     suspend operator fun invoke(loginUser: LoginUser) : Flow<Resource<LoginResult>> =
-        repository.invoke(loginUser)
+        repository.login(loginUser)
 }

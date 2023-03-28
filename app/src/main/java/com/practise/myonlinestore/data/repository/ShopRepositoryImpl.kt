@@ -8,8 +8,8 @@ import kotlinx.coroutines.flow.flow
 
 class ShopRepositoryImpl : ShopRepository {
     override suspend fun getProducts() = flow {
-        emit(Resource.Loading)
-        delay(500)
+//        emit(Resource.Loading)
+//        delay(500)
         emit(Resource.Success(data = getProductForContent()))
     }
 }

@@ -29,7 +29,6 @@ import com.practise.myonlinestore.navigation.Screens
 import com.practise.myonlinestore.presentation.components.CustomTextField
 import com.practise.myonlinestore.presentation.components.LoadingButton
 import com.practise.myonlinestore.presentation.components.PasswordField
-import org.w3c.dom.Text
 
 @Composable
 fun LoginScreen(
@@ -52,10 +51,10 @@ fun LoginScreen(
         if (!uiState.isLoading && uiState.result.isNotEmpty() && uiState.errorMessage.isEmpty()) {
             Toast.makeText(
                 context,
-                "User ${uiState.result} signed up successfully", Toast.LENGTH_LONG
+                "User ${uiState.result} Logged in successfully", Toast.LENGTH_LONG
             ).show()
             navController.popBackStack()
-            navController.navigate(Screens.Login.route) { launchSingleTop = true }
+            navController.navigate(Screens.Shop.route) { launchSingleTop = true }
         } else if (uiState.errorMessage.isNotEmpty()) {
             Toast.makeText(context, uiState.errorMessage, Toast.LENGTH_LONG).show()
         }

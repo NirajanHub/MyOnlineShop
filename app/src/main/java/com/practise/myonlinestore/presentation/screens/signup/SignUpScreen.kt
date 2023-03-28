@@ -50,7 +50,6 @@ fun SignUpScreen(
             uiState.passwordInput.isNotEmpty() &&
             uiState.passwordInput == uiState.confirmPasswordInput
 
-
     LaunchedEffect(key1 = uiState.isLoading) {
         if (!uiState.isLoading && uiState.result.isNotEmpty() && uiState.errorMessage.isEmpty()) {
             Toast.makeText(
@@ -58,7 +57,7 @@ fun SignUpScreen(
                 "User ${uiState.result} signed up successfully", Toast.LENGTH_LONG
             ).show()
             navController.popBackStack()
-            navController.navigate(Screens.Login.route) { launchSingleTop = true }
+            navController.navigate(Screens.Shop.route) { launchSingleTop = true }
         } else if (uiState.errorMessage.isNotEmpty()) {
             Toast.makeText(context, uiState.errorMessage, Toast.LENGTH_LONG).show()
         }
@@ -113,7 +112,9 @@ fun SignUpScreen(
             )
             Spacer(modifier = Modifier.padding(10.dp))
             ClickableText(
-                modifier = Modifier.align(Alignment.End).padding(end = 5.dp),
+                modifier = Modifier
+                    .align(Alignment.End)
+                    .padding(end = 5.dp),
                 text = AnnotatedString(
                     text = "Already have an account? Goto Login!!",
                     spanStyles = listOf(

@@ -1,13 +1,13 @@
 package com.practise.myonlinestore.presentation.components
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -18,10 +18,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.practise.myonlinestore.R
 import com.practise.myonlinestore.ui.theme.textFieldColors
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -38,6 +39,21 @@ fun CustomTextField(
             onInputChanged(it)
         },
         colors = textFieldColors()
+    )
+}
+
+@Composable
+fun MyMediumText(
+    modifier: Modifier = Modifier,
+    text: String = "",
+) {
+    Text(
+        color = MaterialTheme.colorScheme.primary,
+        modifier = modifier,
+        text = AnnotatedString(
+            text,
+            spanStyle = SpanStyle(fontStyle = FontStyle(R.font.gilroymedium)),
+        )
     )
 }
 

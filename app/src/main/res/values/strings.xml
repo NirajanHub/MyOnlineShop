@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyOnlineStore</string>
     <string name="password_visibility">Password Visibility</string>
+    <string name="delicious_food">Delicious \n \nFood For You</string>
 </resources>

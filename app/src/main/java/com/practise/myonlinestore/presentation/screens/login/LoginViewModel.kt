@@ -27,11 +27,6 @@ class LoginViewModel @Inject constructor(
             viewModelState.value.toUiState()
         )
 
-    private val loginUser = LoginUser(
-        email = uiState.value.emailInput,
-        password = uiState.value.passwordInput
-    )
-
     fun onEmailInputChanged(emailInput: String) {
         viewModelState.update {
             it.copy(emailInput = emailInput)

@@ -6,5 +6,5 @@ import com.practise.myonlinestore.util.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface LoginRepository {
-    suspend fun invoke(loginUser: LoginUser): Flow<Resource<LoginResult>>
+    suspend fun login(loginUser: LoginUser): Flow<Resource<LoginResult>>
 }

@@ -37,6 +37,12 @@ object RepositoryModule {
     fun provideShopRepository(): ShopRepository {
         return ShopRepositoryImpl()
     }
+//
+//    @Provides
+//    @Singleton
+//    fun provideProfileRepository(): ProfileRepository{
+//        return Profil;e
+//    }
 
     @Provides
     @Singleton
