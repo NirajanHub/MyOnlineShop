@@ -1,4 +1,4 @@
-package com.practise.myonlinestore.presentation.screens.shop
+package com.practise.myonlinestore.presentation.screens.home
 
 import com.practise.myonlinestore.domain.model.Product
 

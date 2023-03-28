@@ -3,7 +3,6 @@ package com.practise.myonlinestore.presentation.screens.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.practise.myonlinestore.domain.use_cases.UseCases
-import com.practise.myonlinestore.presentation.screens.shop.ShopStatesViewModel
 import com.practise.myonlinestore.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*

@@ -80,6 +80,9 @@ fun ShopScreen(
                 ),
                     modifier = Modifier.fillMaxSize(),
                     onItemClick = {
+                        scope.launch {
+                            drawerState.close()
+                        }
                         navControllerForDrawer.navigate(it.route)
                     }
                 )
@@ -98,7 +101,7 @@ fun ShopScreen(
                                 contentDescription = "Shopping Cart"
                             )
                         },
-                        navigationIcon = R.drawable.ic_hamburger,
+                        navigationIcon = Icons.Default.Menu,
                     ) {
                         scope.launch {
                             drawerState.open()
